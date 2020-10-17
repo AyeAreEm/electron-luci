@@ -47,4 +47,5 @@ a {
   display: inline-block;
   border-radius: 5px;
   margin-top: 10px;
+  outline: none;
 }
