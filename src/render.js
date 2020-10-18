@@ -1,8 +1,13 @@
+const electron = require('electron');
+const ipc = electron.ipcRenderer;
+
 const inp = document.getElementById("input");
 const content =  document.getElementById("content");
 const sub = document.getElementById("sub");
 
 async function results() {
+    content.textContent = "";
+    content.setAttribute('href', "");
     sub.textContent = "";
     sub.setAttribute('href', "");
 
@@ -54,6 +59,10 @@ async function results() {
 
         case inp.value.charAt(0) == "c" && inp.value.charAt(1) == "a" && inp.value.charAt(2) == "l":
             content.textContent = `${eval(inp.value.substring(4))}`;
+            break;
+
+        case inp.value.charAt(0) == "f" && inp.value.charAt(1) == "i" && inp.value.charAt(2) == "l" && inp.value.charAt(3) == "e":
+            ipc.send('open-file', inp.value.substring(5));
             break;
 
         default:
