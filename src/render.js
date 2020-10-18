@@ -57,6 +57,26 @@ async function results() {
             content.setAttribute('href', 'twitch://');
             break;
 
+        case inp.value == "razer":
+            ipc.send('open-file', 'C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Razer\\Razer Synapse.lnk');
+            break;
+
+        case inp.value == "cmd":
+            ipc.send('open-file', 'C:\\Users\\Adrian\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\System Tools\\Command Prompt.lnk');
+            break;
+
+        case inp.value == "file explorer":
+            ipc.send('open-file', 'C:\\Users\\Adrian\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\System Tools\\File Explorer.lnk');
+            break;
+
+        case inp.value == "steelseries":
+            ipc.send('open-file', 'C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\SteelSeries\\SteelSeries Engine 3\\SteelSeries Engine 3.lnk');
+            break;
+
+        case inp.value == "zoom":
+            ipc.send('open-file', 'C:\\Users\\Adrian\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Zoom\\Zoom.lnk');
+            break;
+
         case inp.value.charAt(0) == "c" && inp.value.charAt(1) == "a" && inp.value.charAt(2) == "l":
             content.textContent = `${eval(inp.value.substring(4))}`;
             break;
