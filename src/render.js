@@ -77,6 +77,10 @@ async function results() {
             ipc.send('open-file', 'C:\\Users\\Adrian\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Zoom\\Zoom.lnk');
             break;
 
+        case inp.value == "minecraft":
+            ipc.send('open-file', '"D:\\Minecraft Launcher\\MinecraftLauncher.exe"');
+            break;
+
         case inp.value.charAt(0) == "c" && inp.value.charAt(1) == "a" && inp.value.charAt(2) == "l":
             content.textContent = `${eval(inp.value.substring(4))}`;
             break;
