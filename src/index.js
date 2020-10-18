@@ -6,7 +6,7 @@ if (require('electron-squirrel-startup')) {
 }
 
 ipcMain.on('open-file', (e, input) => {
-  if (!input.includes('C:\\')) {
+  if (!input.includes(':')) {
     input = `C:\\Users\\Adrian\\Desktop\\${input}`;
   }
 
