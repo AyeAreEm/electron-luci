@@ -78,7 +78,7 @@ async function results() {
             break;
 
         case inp.value == "minecraft":
-            ipc.send('open-file', '"D:\\Minecraft Launcher\\MinecraftLauncher.exe"');
+            ipc.send('open-file', 'D:\\Minecraft Launcher\\MinecraftLauncher.exe');
             break;
 
         case inp.value.charAt(0) == "c" && inp.value.charAt(1) == "a" && inp.value.charAt(2) == "l":
